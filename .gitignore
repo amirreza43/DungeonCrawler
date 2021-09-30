@@ -1,0 +1,9 @@
+.vscode
+DatabaseLib/obj
+DatabaseLib/bin
+DungeonLib/obj
+DungeonLib/bin
+MainApp/obj
+MainApp/bin
+test/obj
+test/bin

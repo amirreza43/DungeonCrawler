@@ -72,7 +72,7 @@ namespace MainApp
                 }else if(playerActionArray[0]=="HighScores"){
 
                     Console.WriteLine("\n-------\n-------");
-                    db.Players.Where(p => p.HighScore > 1).OrderBy(p => player.HighScore)
+                    db.Players.Where(p => p.HighScore > 1).OrderByDescending(p => player.HighScore)
                     .ToList()
                     .ForEach
                     (x => Console.WriteLine($"{x.Name}'s stats: Hp: {x.Hp}, Attack: {x.Attack}, Defense: {x.Defense}, Lvl(Xp): {x.Lvl}({x.Xp}), HighScore: {x.HighScore}"));

@@ -180,6 +180,11 @@ namespace MainApp
                     if(room.NextPos.Equals((availableMove.row, availableMove.col)) && room.EnemyPos[0].Equals((0,0))){
                         PlayerPosition = (availableMove.row, availableMove.col);
                         PlayerActions.room = Next(player);
+                        Random rnd = new Random();
+                        var addRandomHp = rnd.Next(0, 14);
+                        player.Hp += addRandomHp;
+                        db.Update(player);
+                        db.SaveChanges();
                     }else if(room.NextPos.Equals((availableMove.row, availableMove.col)) && !room.EnemyPos[0].Equals((0,0))){
                         Console.WriteLine("You have to defeat all the enemies in this room first!");
                     }

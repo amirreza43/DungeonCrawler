@@ -35,7 +35,10 @@ namespace MainApp
                         break;
                     }
                 }
-                enemies = new List<Enemy>{new Enemy(10, 13, 3)};
+                var enemyHp = rnd.Next(8, 13);
+                var enemyAtt = rnd.Next(13, 16);
+                var enemyDef = rnd.Next(1, 5);
+                enemies = new List<Enemy>{new Enemy(enemyHp, enemyAtt, enemyDef)};
                 room = new Room(){
                     Row = 3,
                     Column = 3,
@@ -65,7 +68,13 @@ namespace MainApp
                         break;
                     }
                 }
-                enemies = new List<Enemy>{new Enemy(10, 13, 3), new Enemy(10, 15, 3)};
+                var enemyHp1 = rnd.Next(10, 15);
+                var enemyAtt1 = rnd.Next(13, 16);
+                var enemyDef1 = rnd.Next(1, 5);
+                var enemyHp2 = rnd.Next(10, 15);
+                var enemyAtt2 = rnd.Next(13, 16);
+                var enemyDef2 = rnd.Next(1, 5);
+                enemies = new List<Enemy>{new Enemy(enemyHp1, enemyAtt1, enemyDef1), new Enemy(enemyHp2, enemyAtt2, enemyDef2)};
                 room = new Room(){
                     Row = 3,
                     Column = 3,
